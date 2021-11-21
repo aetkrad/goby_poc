@@ -4,7 +4,7 @@
       "Tags": [
             "sqli"
       ],
-      "GobyQuery": "app=\"Discuz\" | body=\"Powered by Discuz!\"",
+      "GobyQuery": "(app=\"Discuz\" | body=\"Powered by Discuz!\")",
       "Description": "discuz7.2论坛存在sql注入漏洞",
       "Product": "Discuz",
       "Homepage": "https://www.discuz.net/",

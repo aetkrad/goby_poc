@@ -4,7 +4,7 @@
       "Tags": [
             "ssrf"
       ],
-      "GobyQuery": "product=\"Apache-Web-Server\"||server=\"Apache\"",
+      "GobyQuery": "(product=\"Apache-Web-Server\"||server=\"Apache\")",
       "Description": "A Server-Side Request Forgery (SSRF) flaw was found in mod_proxy of httpd. This flaw allows a remote, unauthenticated attacker to make the httpd server forward requests to an arbitrary server. The attacker could get, modify, or delete resources on other services that may be behind a firewall and inaccessible otherwise. The impact of this flaw varies based on what services and resources are available on the httpd network",
       "Product": "Apache-Web-Server",
       "Homepage": "https://gobies.org/",

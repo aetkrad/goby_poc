@@ -4,7 +4,7 @@
       "Tags": [
             "rce"
       ],
-      "GobyQuery": "app=discuz | body=\"Powered by Discuz! X3.4\"",
+      "GobyQuery": "(app=discuz | body=\"Powered by Discuz! X3.4\")",
       "Description": "2019年7月11日， Discuz！ML被发现存在一处远程代码执行漏洞，攻击者通过在请求流量的cookie字段中的language参数处插入构造的payload，进行远程代码执行利用。",
       "Product": "Discuz!ML",
       "Homepage": "http://discuz.ml/",

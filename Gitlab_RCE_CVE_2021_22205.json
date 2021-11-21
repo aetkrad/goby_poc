@@ -4,7 +4,7 @@
       "Tags": [
             "rce"
       ],
-      "GobyQuery": "app=gitlab | title=\"gitlab\"",
+      "GobyQuery": "(app=gitlab | title=\"gitlab\")",
       "Description": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 11.9. GitLab was not properly validating image files that were passed to a file parser which resulted in a remote command execution",
       "Product": "gitlab",
       "Homepage": "https://about.gitlab.com/",

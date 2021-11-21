@@ -4,7 +4,7 @@
       "Tags": [
             "getshell"
       ],
-      "GobyQuery": "app=\"cacti-监控系统\"|title=\"Login to Cacti\"|app=\"Cactiez\"",
+      "GobyQuery": "(app=\"cacti-监控系统\"|title=\"Login to Cacti\"|app=\"Cactiez\")",
       "Description": "allows remote attackers to upload and execute arbitrary files",
       "Product": "cacti-监控系统",
       "Homepage": "https://www.cacti.net/",

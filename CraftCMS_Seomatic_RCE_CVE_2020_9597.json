@@ -4,7 +4,7 @@
       "Tags": [
             "rce"
       ],
-      "GobyQuery": "title==\"Welcome to Craft CMS\"  | body=\"href=\\\"http://craftcms.com/\\\"\" | body=\"SEOmatic\" | header=\"Craft CMS\" | header=\"Craft CMS, SEOmatic\"",
+      "GobyQuery": "(title==\"Welcome to Craft CMS\"  | body=\"href=\\\"http://craftcms.com/\\\"\" | body=\"SEOmatic\" | header=\"Craft CMS\" | header=\"Craft CMS, SEOmatic\")",
       "Description": "The SEOmatic component before 3.3.0 for Craft CMS allows Server-Side Template Injection that leads to RCE via malformed data to the metacontainers controller.",
       "Product": "craftcms",
       "Homepage": "https://craftcms.com/",

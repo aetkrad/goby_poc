@@ -4,7 +4,7 @@
       "Tags": [
             "rce"
       ],
-      "GobyQuery": "app=\"Discuz\" | body=\"Powered by Discuz!\"",
+      "GobyQuery": "(app=\"Discuz\" | body=\"Powered by Discuz!\")",
       "Description": "由于php5.3.x版本里php.ini的设置里request_order默认值为GP，导致$_REQUEST中不再包含$_COOKIE，我们通过在Cookie中传入$GLOBALS来覆盖全局变量，造成代码执行漏洞。",
       "Product": "discuz",
       "Homepage": "https://www.discuz.net/",
