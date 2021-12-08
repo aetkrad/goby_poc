@@ -1,5 +1,5 @@
 {
-      "Name": "Grafana Plugins Arbitrary File Read",
+      "Name": "Grafana Plugins Arbitrary File Read CVE-2021-43798",
       "Level": "3",
       "Tags": [
             "fileread"
@@ -100,6 +100,6 @@
                   ]
             }
       ],
-      "PostTime": "2021-12-08 13:46:58",
+      "PostTime": "2021-12-08 13:56:21",
       "GobyVersion": "1.9.310"
 }
