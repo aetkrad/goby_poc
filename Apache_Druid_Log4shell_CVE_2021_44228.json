@@ -4,7 +4,7 @@
       "Tags": [
             "rce"
       ],
-      "GobyQuery": "app=\"APACHE-Druid\"",
+      "GobyQuery": "title==\"Apache Druid\"",
       "Description": "Apache Druid存在log4j漏洞。",
       "Product": "Apache Druid",
       "Homepage": "https://druid.apache.org/",
@@ -131,6 +131,6 @@
                   ]
             }
       ],
-      "PostTime": "2021-12-30 10:43:38",
+      "PostTime": "2021-12-30 11:00:21",
       "GobyVersion": "1.9.320"
 }
